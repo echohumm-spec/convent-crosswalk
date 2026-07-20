@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File the 311 Report — Convent Ave &amp; W 147 St</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F6F2;--card:#fff;--ink:#16181D;--steel:#5B6470;--green:#00704F;--red:#C8102E;--line:#DDDACF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;font-size:16px;line-height:1.55}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px 72px}
+.sign{margin:40px auto 0;background:#fff;border:3px solid var(--ink);border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(22,24,29,.12)}
+.sign-red{background:var(--red);color:#fff;text-align:center;padding:18px 24px 14px}
+.sign-red h1{font-family:'Barlow Condensed';font-weight:800;font-size:clamp(34px,7vw,46px);line-height:.95;letter-spacing:.02em;text-transform:uppercase}
+.sign-red .p{font-family:'Barlow Condensed';font-weight:600;font-size:clamp(16px,3vw,20px);letter-spacing:.14em;text-transform:uppercase;margin-top:5px}
+.sign-white{padding:12px 24px 14px;text-align:center;border-top:3px solid var(--ink)}
+.sign-white .loc{font-family:'Barlow Condensed';font-weight:600;font-size:19px;letter-spacing:.1em;text-transform:uppercase}
+.sign-white .sub{font-size:13px;color:var(--steel);margin-top:3px}
+.pill{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-size:12.5px;font-weight:600;border:1.5px solid var(--line);border-radius:99px;padding:5px 14px;background:var(--paper)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--steel)}
+.pill.ok .dot{background:var(--green)}.pill.bad .dot{background:var(--red)}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:18px;margin-top:22px}
+.card h2{font-family:'Barlow Condensed';font-weight:800;font-size:22px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+label{display:block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);margin:12px 0 5px}
+textarea,input[type=text]{width:100%;font:inherit;font-size:15px;line-height:1.6;border:1.5px solid var(--line);border-radius:8px;padding:11px 13px;background:var(--paper);color:var(--ink)}
+textarea{resize:vertical;min-height:130px}
+textarea:focus-visible,input:focus-visible{outline:3px solid var(--green);outline-offset:1px}
+.affirm{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:14.5px}
+.affirm input{width:19px;height:19px;margin-top:2px;accent-color:var(--green)}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+button{font:inherit;font-weight:700;font-size:15px;padding:12px 20px;border-radius:9px;cursor:pointer;border:2px solid var(--ink);background:var(--paper);color:var(--ink);transition:transform .12s}
+button:hover{transform:translateY(-1px)}
+button:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+button.primary{background:var(--green);border-color:var(--green);color:#fff}
+button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+pre{margin-top:14px;background:var(--ink);color:#E8E6DF;font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.55;border-radius:8px;padding:14px;overflow-x:auto;white-space:pre-wrap;word-break:break-word;display:none}
+pre.show{display:block}
+.statusrow{display:flex;gap:10px}
+.statusrow input{flex:1}
+.hp{position:absolute;left:-6000px}
+.foot{margin-top:26px;font-size:13px;color:var(--steel)}
+.foot a{color:var(--green)}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="sign">
+    <div class="sign-red"><h1>File the report</h1><div class="p">Illegal Parking &middot; Blocked Crosswalk</div></div>
+    <div class="sign-white">
+      <div class="loc">393 Convent Avenue &middot; Manhattan</div>
+      <div class="sub">White Dodge RAM 1500 &middot; NY plate LAB-2134 &middot; filed anonymously to NYC 311</div>
+      <div class="pill" id="pill"><span class="dot"></span><span id="pillText">Checking connection&hellip;</span></div>
+    </div>
+  </header>
+
+  <div class="card">
+    <h2>Your report</h2>
+    <p style="font-size:14px;color:var(--steel)">Location, vehicle, plate, and timestamp are filled automatically. Describe what you're seeing in your own words &mdash; independent descriptions from different neighbors carry more weight than identical ones.</p>
+    <label for="desc">What you're observing</label>
+    <textarea id="desc">White Dodge RAM 1500 pickup truck, NY plate LAB-2134, parked in the no-parking zone at Convent Avenue and West 147th Street, blocking the crosswalk and forcing pedestrians into the intersection.</textarea>
+    <input class="hp" type="text" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="affirm">
+      <input type="checkbox" id="observed">
+      <label for="observed" style="display:inline;font-size:14.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink);margin:0">I am observing this vehicle blocking the crosswalk <b>right now</b> (or within the past hour). This files a real report that NYPD may respond to.</label>
+    </div>
+    <div class="btns">
+      <button id="preview">Preview (nothing sent)</button>
+      <button id="submit" class="primary" disabled>File the report</button>
+    </div>
+    <pre id="out" aria-live="polite"></pre>
+  </div>
+
+  <div class="card">
+    <h2>Track a report</h2>
+    <div class="statusrow">
+      <input type="text" id="sr" placeholder="Service request number, e.g. 311-01234567">
+      <button id="lookup">Look up</button>
+    </div>
+    <pre id="statusOut" aria-live="polite"></pre>
+  </div>
+
+  <p class="foot">Prefer to file yourself, or want to attach photos? Use the
+    <a href="index.html">copy-paste filing kit</a> or go straight to the
+    <a href="https://portal.311.nyc.gov/article/?kanumber=KA-01986" target="_blank" rel="noopener">official NYC 311 form</a>.
+    This page never sees or stores any key or personal information; reports are relayed through a locked proxy that can only file this one complaint type at this one corner.</p>
+
+</div>
+
+<script>
+// ONE thing to configure: your deployed Cloudflare Worker URL.
+const WORKER_URL = "https://nyc311-proxy.echohumm.workers.dev";
+
+const $ = id => document.getElementById(id);
+const out = (el, obj) => { el.textContent = typeof obj === "string" ? obj : JSON.stringify(obj, null, 2); el.classList.add("show"); };
+
+async function call(path, opts) {
+  const r = await fetch(WORKER_URL.replace(/\/$/, "") + path, opts);
+  let body; try { body = await r.json(); } catch { body = await r.text(); }
+  return { httpStatus: r.status, ...((typeof body === "object" && body) || { body }) };
+}
+
+// Connection + key check on load
+(async () => {
+  const pill = $("pill"), t = $("pillText");
+  if (WORKER_URL.includes("YOUR-WORKER")) { pill.classList.add("bad"); t.textContent = "Not configured — set WORKER_URL in this file"; return; }
+  try {
+    const r = await call("/check");
+    if (r.keyWorks) { pill.classList.add("ok"); t.textContent = "Connected — 311 API key verified"; }
+    else { pill.classList.add("bad"); t.textContent = "Proxy reachable, but key check failed (see console)"; console.warn(r); }
+  } catch (e) { pill.classList.add("bad"); t.textContent = "Can't reach the proxy — is the worker deployed?"; }
+})();
+
+$("observed").addEventListener("change", e => $("submit").disabled = !e.target.checked);
+
+function payload(dryRun) {
+  return { description: $("desc").value, observedNow: $("observed").checked, website: $("website").value, dryRun };
+}
+async function send(dryRun) {
+  const btn = dryRun ? $("preview") : $("submit");
+  btn.disabled = true;
+  out($("out"), dryRun ? "Building preview…" : "Filing…");
+  try {
+    const r = await call("/submit", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload(dryRun)) });
+    out($("out"), r);
+    if (!dryRun && r.httpStatus === 200) out($("out"), { filed: true, saveThis: "Note the SR number in the result below to track it.", ...r });
+  } catch (e) { out($("out"), "Request failed: " + e.message); }
+  btn.disabled = dryRun ? false : !$("observed").checked;
+}
+$("preview").addEventListener("click", () => send(true));
+$("submit").addEventListener("click", () => send(false));
+
+function renderSR(r) {
+  const s = r.result;
+  if (!s || !s.SRNumber) return out($("statusOut"), r);
+  const line = (k, v) => v ? k + ": " + v + "\n" : "";
+  out($("statusOut"),
+    line("Report", s.SRNumber) +
+    line("Filed", (s.DateTimeSubmitted || "").replace("T", " ")) +
+    line("Problem", [s.Problem, s.ProblemDetails].filter(Boolean).join(" — ")) +
+    line("Agency", s.Agency) +
+    line("Where", s.Address && s.Address.FullAddress) +
+    line("Last update", (s.ResolutionActionUpdatedDate || "").replace("T", " ")) +
+    (s.ResolutionAction ? "\nOutcome: " + s.ResolutionAction : "\nNo resolution posted yet."));
+}
+$("lookup").addEventListener("click", async () => {
+  const sr = $("sr").value.trim();
+  if (!sr) return out($("statusOut"), "Enter a service request number.");
+  out($("statusOut"), "Looking up…");
+  try { renderSR(await call("/status?sr=" + encodeURIComponent(sr))); }
+  catch (e) { out($("statusOut"), "Request failed: " + e.message); }
+});
+</script>
+</body>
+</html>
